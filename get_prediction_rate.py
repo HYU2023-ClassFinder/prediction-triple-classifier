@@ -1,5 +1,8 @@
 from typing import Dict
-
+"""
+Calculate rate of prediction from predicted triples.
+The rate is used as a feature in the classification model.
+"""
 f = open('predicted_triples.csv')
 lines = f.readlines()
 f.close()
@@ -8,6 +11,7 @@ count_heads: Dict = {}
 count_tails: Dict = {}
 entity_map: Dict = {}
 
+# line format: id, head_name, relation_name, tail_name, score, rank, head, tail
 for line in lines:
     tokens = line.strip().split(',')
     head_name = tokens[1]

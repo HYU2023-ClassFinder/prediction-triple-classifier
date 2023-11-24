@@ -5,6 +5,11 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 
+"""
+Do not separate train and test data to get maximum (but biased) predictions
+This was not used in the final result.
+"""
+
 # read data
 df = pd.read_csv('annotated_predicted_triples.csv')
 
